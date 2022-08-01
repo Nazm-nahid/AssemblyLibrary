@@ -18,6 +18,15 @@ DECOUT PROC
         INC CX
         CMP AX,0
         JNE DIVI 
+    
+    MOV AH,2
+    
+    PRINT:
+        POP DX 
+        ADD DX,'0'
+        INT 21H
+        
+        LOOP PRINT
                  
        
     POP DX
